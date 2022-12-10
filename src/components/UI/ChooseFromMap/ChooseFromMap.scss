@@ -1,0 +1,31 @@
+@import "../../../assets/colors";
+@import "../../../assets/fonts";
+
+.container {
+  width: 50vh;
+  .ChooseBox {
+    padding: 6px 24px 6px 24px;
+    background: $alb;
+    border: 2px solid $gri-inchis;
+    border-radius: 8px;
+  }
+  .ChooseParent {
+    white-space: nowrap;
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+  }
+  .ChooseChild {
+    display: inline-block;
+  }
+  .ChooseChild p {
+    font-family: '600';
+    font-style: normal;
+    font-size: 14px;
+    line-height: 20px;
+    color: #1A67D2;
+  }
+  .locatorIcon {
+    color: $gri-inchis;
+  }
+}
