@@ -1,9 +1,10 @@
 import SurveryNavigation from "./components/SurveyNavigation";
+import DateAndTime from "./components/UI/DateAndTime/DateAndTime";
 
 function App() {
   return (
     <div>
-      <SurveryNavigation></SurveryNavigation>
+        <DateAndTime></DateAndTime>
     </div>
   );
 }
