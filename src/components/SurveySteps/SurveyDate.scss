@@ -42,6 +42,7 @@ input:focus {
 .overlay__hidden{ display: none;}
 
 .react-calendar{
+    z-index: 2;
     padding: 2rem;
     font-family: "400";
     border: none;
