@@ -8,7 +8,7 @@ import Location from "./components/Location/Location";
 function App() {
   return (
     <div>
-      <Location></Location>
+      <SurveryNavigation></SurveryNavigation>
     </div>
   );
 }

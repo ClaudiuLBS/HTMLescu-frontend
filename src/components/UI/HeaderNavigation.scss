@@ -1,6 +1,10 @@
+@import "../../assets/colors";
+
 .header_navigation{
-    background: #199CF9;
+    background: $albastru-deschis;
+    color: $alb;
     display: flex;
     align-items: center;
     justify-content: space-around;
+    padding: 16px;
 }
