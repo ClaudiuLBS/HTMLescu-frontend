@@ -1,0 +1,43 @@
+@import "../../assets/colors";
+
+// SURVEY WRAPPER FOR THE WHOLE SURVEY
+// .survey-wrapper{
+//     display: flex;
+//     align-items: center;
+//     justify-content: center;
+//     flex-direction: column;
+//     width: 100%;
+// }
+
+.survey_navigation{
+    position: relative;
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+    max-width: 50vw;
+    border-radius: 15px;
+}
+
+.survey_navigation::after{
+    content: "";
+    position: absolute;
+    background: $gri-inchis;
+    height: 5px;
+    width: 100%;
+}
+
+.survey_step{
+    z-index: 1;
+    background-color: $gri-inchis;
+    height: 15px;
+    width: 15px;
+    border-radius: 50%;
+}
+
+.survey_step__active{
+    height: 30px;
+    width: 30px;
+}
+
+.survey_step__active,
+.survey_step__done{ background-color: $albastru-deschis;}

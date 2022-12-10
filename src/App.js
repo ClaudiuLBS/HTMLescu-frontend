@@ -1,8 +1,10 @@
-import HeaderNavigation from "./components/UI/HeaderNavigation";
+import SurveryNavigation from "./components/SurveyNavigation";
 
 function App() {
   return (
-    <header-navigation></header-navigation>
+    <div>
+      <SurveryNavigation></SurveryNavigation>
+    </div>
   );
 }
 
