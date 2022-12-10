@@ -1,6 +1,6 @@
 import './App.css';
-import Drop_down from "./components/drop-down/drop-down";
-import MainTitle from "./components/mainTitle/mainTitle";
+import Drop_down from "./components/Drop_down/Drop_down";
+import MainTitle from "./components/MainTitle/MainTitle";
 import MainDescription from "./components/MainDescription/MainDescription";
 function App() {
   return (
