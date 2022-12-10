@@ -2,9 +2,9 @@ import "./SearchBranch.scss"
 function SearchBranch(props) {
     return (
         <div className="container">
-            <form className="nosubmit">
+            <div className="nosubmit">
                 <input className="nosubmit" type="search" placeholder="Cauta unitate..."></input>
-            </form>
+            </div>
         </div>
     );
 }
