@@ -1,4 +1,4 @@
-import "./search_branch.scss"
+import "./SearchBranch.scss"
 function Search_branchs(props) {
     return (
         <div className="container">

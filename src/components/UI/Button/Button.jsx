@@ -1,4 +1,5 @@
-import "./Button.scss"
+import "./Button.scss";
+
 function Button(props) {
     return (
         <div>
