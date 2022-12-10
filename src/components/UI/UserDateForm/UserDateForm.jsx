@@ -21,7 +21,6 @@ function UserDateForm(props) {
                         </div>
                     </div>
                 </form>
-=======
                 <div className="formInputBox">
                     <div className="formInputBlock">
                         <div className="formInputLabel">
@@ -38,7 +37,6 @@ function UserDateForm(props) {
                         <input type="email" className="email" name="email"></input>
                     </div>
                 </div>
->>>>>>> vlad
             </div>
     );
 }
