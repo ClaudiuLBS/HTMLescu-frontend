@@ -38,7 +38,7 @@ const ApiService = {
     return new Promise((resolve, reject) => {
       axios
         .get(`${config.apiUrl}/available/${id}`)
-        .then((result) => resolve(result.data.cities))
+        .then((result) => resolve(result.data.availableTimeList))
         .catch((err) => reject(err));
     });
   }
