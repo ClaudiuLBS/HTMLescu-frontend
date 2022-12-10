@@ -2,7 +2,6 @@
 @import "../../../assets/fonts";
 div {
   .button {
-    width: 100%;
     font-family: '600';
     font-style: normal;
     font-size: 18px;
@@ -12,6 +11,7 @@ div {
     background: $albastru-deschis;
     border-radius: 6px;
     padding: 10px;
+    margin-top: 10px;
   }
 
   .button:hover{ cursor: pointer;}
