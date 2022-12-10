@@ -3,7 +3,7 @@ import { FaLocationArrow } from 'react-icons/fa'
 
 function ChooseFromMap(props) {
     return (
-        <div className="container">
+        <div className="ccontainer">
             <div className="ChooseBox">
                 <div className="ChooseParent">
                     <div className="ChooseChild">
