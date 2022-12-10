@@ -1,29 +1,46 @@
 @import "../../assets/colors";
 
+:root{
+    --navWidthComplete: 0%;
+    --navWidthIncomplete: 0%;
+}
+
+// WHOLE BODY WRAPPER
+.body_wrapper{
+    background: $gri-deschis;
+    height: 100vh;
+}
+
+// PAGE WRAPPER
+.page_wrapper{
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    flex-direction: column;
+}
+
 // SURVEY WRAPPER FOR THE WHOLE SURVEY
-// .survey-wrapper{
-//     display: flex;
-//     align-items: center;
-//     justify-content: center;
-//     flex-direction: column;
-//     width: 100%;
-// }
+.survey_wrapper{
+    background: $alb;
+    padding: 3rem;
+}
 
 .survey_navigation{
     position: relative;
     display: flex;
     align-items: center;
     justify-content: space-between;
-    max-width: 50vw;
+    width: 50vw;
     border-radius: 15px;
+    padding: 3rem;
 }
 
 .survey_navigation::after{
     content: "";
     position: absolute;
-    background: $gri-inchis;
+    background: linear-gradient(110deg,$albastru-deschis 0%, $albastru-deschis var(--navWidthComplete), $gri-inchis var(--navWidthComplete), $gri-inchis var(--navWidthIncomplete));
     height: 5px;
-    width: 100%;
+    width: 50vw;
 }
 
 .survey_step{
@@ -45,8 +62,8 @@
 }
 
 .survey_step__active{
-    height: 30px;
-    width: 30px;
+    height: 25px;
+    width: 25px;
     a{
         color: $albastru-deschis;
     }
