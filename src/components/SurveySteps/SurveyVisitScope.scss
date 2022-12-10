@@ -5,8 +5,10 @@
 }
 
 .survey_unity__scope{
-    .container{
+    .container,
+    input{
         flex: 1;
         margin-right: 1rem;
     }
+
 }

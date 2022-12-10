@@ -1,0 +1,83 @@
+@import "../../assets/colors";
+@import "../../assets/fonts";
+
+input{
+    border: none;
+    margin: 0;
+    font-family: "600";
+    border: 2px solid $gri-inchis;
+    padding: 9px 4px 9px 40px;
+    border-radius: inherit;
+    background: transparent url("data:image/svg+xml,%3Csvg xmlns='http://www.w3.org/2000/svg' width='16' height='16' class='bi bi-calendar' viewBox='0 0 16 16'%3E%3Cpath d='M3.5 0a.5.5 0 0 1 .5.5V1h8V.5a.5.5 0 0 1 1 0V1h1a2 2 0 0 1 2 2v11a2 2 0 0 1-2 2H2a2 2 0 0 1-2-2V3a2 2 0 0 1 2-2h1V.5a.5.5 0 0 1 .5-.5zM1 4v10a1 1 0 0 0 1 1h12a1 1 0 0 0 1-1V4H1z'%3E%3C/path%3E%3C/svg%3E") no-repeat 13px center;
+}
+
+input::placeholder { color: #bbb; }
+input:hover{ cursor: pointer;}
+input:focus {
+    border-color: $albastru-inchis;
+    border: 2px solid $albastru-inchis;
+    outline: none;
+}
+
+// CALENDAR OVERLAY
+.react-calendar__overlay{
+    position: absolute;
+    left: 50%;
+    top: 50%;
+    transform: translate(-50%,-50%);
+    z-index: 1;
+    height: 100vh;
+    width: 100vw;
+
+    background: rgba( 255, 255, 255, 0.3 );
+    backdrop-filter: blur( 3px );
+    -webkit-backdrop-filter: blur( 3px );
+
+    display: flex;
+    align-items: center;
+    justify-content: center;
+}
+
+// CALENDAR OVERLAY HIDDEN
+.overlay__hidden{ display: none;}
+
+.react-calendar{
+    z-index: 2;
+    padding: 2rem;
+    font-family: "400";
+    border: none;
+    border-radius: 0.5rem;
+    box-shadow: rgba(100, 100, 111, 0.2) 0px 7px 29px 0px;
+}
+
+// CALENDAR NAVIGATION
+.react-calendar__navigation button{
+    font-family: "400";
+}
+
+.react-calendar__tile{ font-family: "300";}
+.react-calendar__tile:hover{ color: $gri-inchis;}
+
+.react-calendar__tile--active:enabled:hover{
+  background: $gri-inchis;
+  color: white;
+}
+
+// ACTIVE DAY IN THE CALENDAR
+.react-calendar__tile--now {
+    background: transparent;
+    border-radius: 6px;
+    font-weight: bold;
+    color: $albastru-pal;
+    border: 2px solid $albastru-pal !important;
+}
+
+.react-calendar__tile--now:hover{ background: $albastru-inchis;}
+
+// DESIRED DAY IN THE CALENDAR
+.react-calendar__tile--active {
+    background: $albastru-deschis;
+    border-radius: 6px;
+    font-weight: bold;
+    color: white;
+}

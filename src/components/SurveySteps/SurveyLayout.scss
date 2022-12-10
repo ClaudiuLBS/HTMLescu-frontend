@@ -8,7 +8,7 @@
 // WHOLE BODY WRAPPER
 .body_wrapper{
     background: $gri-deschis;
-    height: 100vh;
+    min-height: 100vh;
 }
 
 // PAGE WRAPPER
@@ -26,6 +26,8 @@
     padding: 3rem;
     width: 40vw;
     border-radius: 0.5rem;
+    display: flex;
+    flex-direction: column;
 }
 
 .survey_navigation{

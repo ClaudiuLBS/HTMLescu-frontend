@@ -1,12 +1,12 @@
 import "./SearchBranch.scss"
-function Search_branchs(props) {
+function SearchBranch(props) {
     return (
         <div className="container">
-            <form className="nosubmit">
+            <div className="nosubmit">
                 <input className="nosubmit" type="search" placeholder="Cauta unitate..."></input>
-            </form>
+            </div>
         </div>
     );
 }
 
-export default Search_branchs;
+export default SearchBranch;
