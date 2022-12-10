@@ -1,11 +1,14 @@
 import SurveryNavigation from "./components/SurveyNavigation";
-import DateAndTime from "./components/UI/DateAndTime/DateAndTime";
+import { Provider } from 'react-redux'
+import { store } from './redux/store'
 
+
+// Practic Providerul e componenta principala, de unde porneste state-ul (store)
 function App() {
   return (
-    <div>
-        <DateAndTime></DateAndTime>
-    </div>
+    <Provider store={store}>
+      <SurveryNavigation></SurveryNavigation>
+    </Provider>
   );
 }
 
