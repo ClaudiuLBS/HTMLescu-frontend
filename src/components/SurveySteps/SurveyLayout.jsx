@@ -37,7 +37,7 @@ function SurveryLayout(){
         const root = document.documentElement;
         let completion, incompletion;
         
-        if(pos == 0){
+        if(pos === 0){
             completion = 0;
             incompletion = 0;
         } else{
