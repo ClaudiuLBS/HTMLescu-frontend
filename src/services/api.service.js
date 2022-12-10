@@ -33,6 +33,14 @@ const ApiService = {
         .then((result) => resolve(result.data.cities))
         .catch((err) => reject(err));
     });
+  },
+  getValidIntervals(id) {
+    return new Promise((resolve, reject) => {
+      axios
+        .get(`${config.apiUrl}/available/${id}`)
+        .then((result) => resolve(result.data.cities))
+        .catch((err) => reject(err));
+    });
   }
 };
 
