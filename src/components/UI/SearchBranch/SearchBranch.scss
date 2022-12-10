@@ -1,5 +1,16 @@
 @import "../../../assets/colors";
 
+form {
+  .nosubmit {
+    color: #555;
+    display: flex;
+    padding: 2px;
+    border: 1px solid $gri-inchis;
+    border-radius: 5px;
+    margin: 0 0 30px;
+    border: none;
+    padding: 0;
+  }
 .nosubmit {
   color: #555;
   display: flex;
@@ -11,48 +22,49 @@
   padding: 0;
 }
 
-input[type="search"] {
-  border: none;
-  background: transparent;
-  margin: 0;
-  padding: 7px 8px;
-  font-size: 14px;
-  color: inherit;
-  border: 1px solid transparent;
-  border-radius: inherit;
-}
+  input[type="search"] {
+    border: none;
+    background: transparent;
+    margin: 0;
+    padding: 7px 8px;
+    font-size: 14px;
+    color: inherit;
+    border: 1px solid transparent;
+    border-radius: inherit;
+  }
 
-input[type="search"]::placeholder {
-  color: #bbb;
-}
+  input[type="search"]::placeholder {
+    color: #bbb;
+  }
 
-button[type="submit"] {
-  text-indent: -999px;
-  overflow: hidden;
-  width: 40px;
-  padding: 0;
-  margin: 0;
-  border: 1px solid transparent;
-  border-radius: inherit;
-  background: transparent url("data:image/svg+xml,%3Csvg xmlns='http://www.w3.org/2000/svg' width='16' height='16' class='bi bi-calendar' viewBox='0 0 16 16'%3E%3Cpath d='M3.5 0a.5.5 0 0 1 .5.5V1h8V.5a.5.5 0 0 1 1 0V1h1a2 2 0 0 1 2 2v11a2 2 0 0 1-2 2H2a2 2 0 0 1-2-2V3a2 2 0 0 1 2-2h1V.5a.5.5 0 0 1 .5-.5zM1 4v10a1 1 0 0 0 1 1h12a1 1 0 0 0 1-1V4H1z'%3E%3C/path%3E%3C/svg%3E") no-repeat 13px center;
-  cursor: pointer;
-  opacity: 0.7;
-}
+  button[type="submit"] {
+    text-indent: -999px;
+    overflow: hidden;
+    width: 40px;
+    padding: 0;
+    margin: 0;
+    border: 1px solid transparent;
+    border-radius: inherit;
+    background: transparent url("data:image/svg+xml,%3Csvg xmlns='http://www.w3.org/2000/svg' width='16' height='16' class='bi bi-calendar' viewBox='0 0 16 16'%3E%3Cpath d='M3.5 0a.5.5 0 0 1 .5.5V1h8V.5a.5.5 0 0 1 1 0V1h1a2 2 0 0 1 2 2v11a2 2 0 0 1-2 2H2a2 2 0 0 1-2-2V3a2 2 0 0 1 2-2h1V.5a.5.5 0 0 1 .5-.5zM1 4v10a1 1 0 0 0 1 1h12a1 1 0 0 0 1-1V4H1z'%3E%3C/path%3E%3C/svg%3E") no-repeat 13px center;
+    cursor: pointer;
+    opacity: 0.7;
+  }
 
-button[type="submit"]:hover {
-  opacity: 1;
-}
+  button[type="submit"]:hover {
+    opacity: 1;
+  }
 
-button[type="submit"]:focus,
-input[type="search"]:focus {
-  border-color: $albastru-inchis;
-  border: 2px solid $albastru-inchis;
-  outline: none;
-}
+  button[type="submit"]:focus,
+  input[type="search"]:focus {
+    border-color: $albastru-inchis;
+    border: 2px solid $albastru-inchis;
+    outline: none;
+  }
 
-input.nosubmit {
-  border: 2px solid $gri-inchis;
-  width: 100%;
-  padding: 9px 4px 9px 40px;
-  background: transparent url("data:image/svg+xml,%3Csvg xmlns='http://www.w3.org/2000/svg' width='16' height='16' class='bi bi-calendar' viewBox='0 0 16 16'%3E%3Cpath d='M3.5 0a.5.5 0 0 1 .5.5V1h8V.5a.5.5 0 0 1 1 0V1h1a2 2 0 0 1 2 2v11a2 2 0 0 1-2 2H2a2 2 0 0 1-2-2V3a2 2 0 0 1 2-2h1V.5a.5.5 0 0 1 .5-.5zM1 4v10a1 1 0 0 0 1 1h12a1 1 0 0 0 1-1V4H1z'%3E%3C/path%3E%3C/svg%3E") no-repeat 13px center;
+  input.nosubmit {
+    border: 2px solid $gri-inchis;
+    width: 100%;
+    padding: 9px 4px 9px 40px;
+    background: transparent url("data:image/svg+xml,%3Csvg xmlns='http://www.w3.org/2000/svg' width='16' height='16' class='bi bi-calendar' viewBox='0 0 16 16'%3E%3Cpath d='M3.5 0a.5.5 0 0 1 .5.5V1h8V.5a.5.5 0 0 1 1 0V1h1a2 2 0 0 1 2 2v11a2 2 0 0 1-2 2H2a2 2 0 0 1-2-2V3a2 2 0 0 1 2-2h1V.5a.5.5 0 0 1 .5-.5zM1 4v10a1 1 0 0 0 1 1h12a1 1 0 0 0 1-1V4H1z'%3E%3C/path%3E%3C/svg%3E") no-repeat 13px center;
+  }
 }
