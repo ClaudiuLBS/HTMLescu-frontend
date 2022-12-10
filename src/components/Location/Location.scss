@@ -1,0 +1,66 @@
+@import "../../assets/colors";
+@import "../../assets/fonts";
+.container {
+  display: flex;
+  flex-direction: column;
+  .mainBlock {
+    padding: 16px;
+    box-sizing: border-box;
+    display: flex;
+    flex-direction: column;
+    padding: 16px;
+    background: $alb;
+    border: 2px solid $gri-deschis;
+    border-radius: 8px 8px 0px 0px;
+  }
+  .twoElementsInline {
+    white-space: nowrap;
+    display: flex;
+    justify-content: space-between;
+  }
+  .child {
+    display: inline-block;
+    .name {
+      font-family: '300';
+      font-style: normal;
+      font-size: 16px;
+      line-height: 20px;
+      color: $albastru-inchis;
+    }
+    .distance {
+      font-family: 'Inter';
+      font-style: normal;
+      font-weight: 400;
+      font-size: 12px;
+      line-height: 20px;
+      color: #A3B5C9;
+    }
+  }
+  .map {
+    padding: 16px;
+    box-sizing: border-box;
+    display: flex;
+    flex-direction: row;
+    align-items: center;
+    padding: 16px;
+    background: $alb;
+    border: 2px solid $gri-deschis;
+    border-radius: 0px 0px 8px 8px;
+  }
+  .addressAndServices {
+    font-family: 'Inter';
+    font-style: normal;
+    font-weight: 400;
+    font-size: 14px;
+    line-height: 18px;
+    color: #5C7999;
+  }
+  .disponibility {
+    font-family: 'Inter';
+    font-style: normal;
+    font-weight: 400;
+    font-size: 14px;
+    line-height: 18px;
+    color: #00AB56;
+  }
+}
