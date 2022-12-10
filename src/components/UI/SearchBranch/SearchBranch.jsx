@@ -1,5 +1,5 @@
 import "./SearchBranch.scss"
-function Search_branchs(props) {
+function SearchBranch(props) {
     return (
         <div className="container">
             <div className="nosubmit">
@@ -9,4 +9,4 @@ function Search_branchs(props) {
     );
 }
 
-export default Search_branchs;
+export default SearchBranch;
