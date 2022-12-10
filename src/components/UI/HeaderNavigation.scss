@@ -1,10 +1,12 @@
 @import "../../assets/colors";
+@import "../../assets/fonts";
 
 .header_navigation{
-    background: $albastru-deschis;
+    background: $albastru-inchis;
     color: $alb;
     display: flex;
     align-items: center;
     justify-content: space-around;
+    font-family: "600";
     padding: 16px;
 }

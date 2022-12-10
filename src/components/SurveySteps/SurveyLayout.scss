@@ -17,12 +17,15 @@
     align-items: center;
     justify-content: center;
     flex-direction: column;
+    padding: 3rem;
 }
 
 // SURVEY WRAPPER FOR THE WHOLE SURVEY
 .survey_wrapper{
     background: $alb;
     padding: 3rem;
+    width: 40vw;
+    border-radius: 0.5rem;
 }
 
 .survey_navigation{
@@ -30,9 +33,10 @@
     display: flex;
     align-items: center;
     justify-content: space-between;
-    width: 50vw;
+    width: 30vw;
     border-radius: 15px;
-    padding: 3rem;
+    padding-top: 1rem;
+    padding-bottom: 3rem;
 }
 
 .survey_navigation::after{
@@ -40,7 +44,7 @@
     position: absolute;
     background: linear-gradient(110deg,$albastru-deschis 0%, $albastru-deschis var(--navWidthComplete), $gri-inchis var(--navWidthComplete), $gri-inchis var(--navWidthIncomplete));
     height: 5px;
-    width: 50vw;
+    width: 30vw;
 }
 
 .survey_step{
