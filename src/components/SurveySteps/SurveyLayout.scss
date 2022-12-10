@@ -29,14 +29,27 @@
 .survey_step{
     z-index: 1;
     background-color: $gri-inchis;
+
+    display: flex;
+    align-items: center;
+    justify-content: center;
+
     height: 15px;
     width: 15px;
     border-radius: 50%;
+
+    a{
+        color: $gri-inchis;
+        text-decoration: none;
+    }
 }
 
 .survey_step__active{
     height: 30px;
     width: 30px;
+    a{
+        color: $albastru-deschis;
+    }
 }
 
 .survey_step__active,

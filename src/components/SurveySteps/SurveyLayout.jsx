@@ -1,6 +1,8 @@
 import "./SurveyLayout.scss";
 
 import HeaderNavigation from "../UI/HeaderNavigation"
+
+import { useState } from "react";
 import { Outlet, Link } from "react-router-dom";
 
 function SurveryLayout(){
@@ -12,12 +14,6 @@ function SurveryLayout(){
 
             <div className="survey_navigation">
                 <div className="survey_step survey_step__active">
-                    <Link to="/"></Link>
-                </div>
-                <div className="survey_step">
-                    <Link to="/"></Link>
-                </div>
-                <div className="survey_step">
                     <Link to="/"></Link>
                 </div>
                 <div className="survey_step">
