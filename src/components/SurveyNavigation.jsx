@@ -1,6 +1,5 @@
 import { BrowserRouter, Routes, Route } from "react-router-dom";
 
-import SurveyLayout from "./SurveySteps/SurveyLayout";
 
 import SurveryVisitScope from "./SurveySteps/SurveyVisitScope";
 import SurveyUnity from "./SurveySteps/SurveyUnity";

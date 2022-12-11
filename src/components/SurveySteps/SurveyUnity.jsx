@@ -94,14 +94,7 @@ function SurveyUnity() {
                 <ChooseFromMap></ChooseFromMap>
                 <div>
                     {suggestedBranches.slice(0, numOfBranches).map(branch => (
-                        <Location
-                            title = {branch.name}
-                            distance = "678"
-                            location = {branch.street}
-                                disponibility = "Yees"
-                                services = "Yessir" 
-                                >
-                            </Location>
+                        <Location branch={branch}/>
                         ))}
                         {
                             numOfBranches + 5 < suggestedBranches.length ? <div className="btn-show-more__branches" onClick={() => setNumOfBranches(handleNumOfBranches())}>Afiseaza inca 5 locatii</div> : null
