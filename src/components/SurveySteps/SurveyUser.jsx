@@ -14,7 +14,7 @@ function SurveyUser(){
     return(
         <SurveryLayout currentPage={3}>
             <div className="survey_wrapper">
-                <MainTitle title="Introdu ceva"></MainTitle>
+                <MainTitle title="Introdu datele personale:"></MainTitle>
                 <MainDescription desc="Cauta unitatea BCR unde programezi vizita dupa adresa, oras/sector sau nume unitate."></MainDescription>
                 <UserDateForm navigate={navigate}/>
             </div>

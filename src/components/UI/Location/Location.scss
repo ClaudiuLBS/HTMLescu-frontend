@@ -101,4 +101,11 @@
 
 @media screen and (max-width: 600px){
   .location__container{ margin-top: 10px;}
+
+  .location-select__container{
+    .btn-select{
+      padding: 10px;
+      font-size: 14px;
+    }
+  }
 }
