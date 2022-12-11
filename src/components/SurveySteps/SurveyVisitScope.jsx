@@ -16,8 +16,8 @@ function SurveyVisitScope() {
   return (
     <SurveryLayout currentPage={0}>
       <div className='survey_wrapper'>
-        <MainTitle title='Despre ce vrei sa vorbim?'></MainTitle>
-        <MainDescription desc='Alege unul dintre subiectele de mai jos, pentru care programezi vizita in unitate.'></MainDescription>
+        <MainTitle title='Despre ce doresti sa vorbim?'></MainTitle>
+        <MainDescription desc='Alegeti unul dintre subiectele de mai jos, pentru care veti programa vizita in unitate.'></MainDescription>
         <div className='survey_unity__scope'>
           <DropDown />
           <Buton
