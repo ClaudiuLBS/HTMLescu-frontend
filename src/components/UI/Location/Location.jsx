@@ -1,12 +1,8 @@
 import { useEffect } from "react";
 import "./Location.scss"
 function Location({branch}) {
+    if (!branch) return null;
     const today = new Date()
-
-    useEffect(() => {
-        console.log(branch)
-        console.log(today)
-    }, [])
 
     const getOpeningText = () => {
         const schedule = branch.appointment_schedule
