@@ -1,9 +1,19 @@
 import { useEffect } from "react";
+import { useDispatch } from "react-redux";
+import { setAppointment } from "../../../redux/appointmentSlice";
 import "./Location.scss"
+
+
 function Location({branch}) {
+    const dispatch = useDispatch()
     if (!branch) return null;
     
     const today = new Date()
+
+    const selectBranch = () => {
+        const branchId = branch.id
+        dispatch(setAppointment({branch: branchId}))
+    }
 
     const getOpeningText = () => {
         const schedule = branch.appointment_schedule
@@ -51,7 +61,7 @@ function Location({branch}) {
             <div className="mainBlock">
                 <div className="twoElementsInline">
                     <div className="child">
-                        <h2 className="name">{ branch.title }</h2>
+                        <h2 className="name">{ branch.name }</h2>
                     </div>
                     <div className="child">
                         <p className="distance">{ 100 }</p>
@@ -61,7 +71,7 @@ function Location({branch}) {
                 <p className="disponibility">{ getOpeningText() }</p>
                 <div className="location-select__container">
                     <p className="addressAndServices">{ 'ok' }</p>
-                    <div className="btn-select">Selecteaza</div>
+                    <a href="ChooseDate/"><div onClick={selectBranch} className="btn-select">Selecteaza</div></a>
                 </div>
             
             </div>
