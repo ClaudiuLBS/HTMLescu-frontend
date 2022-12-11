@@ -12,19 +12,11 @@ function SurveryNavigation(){
     return(
         <BrowserRouter>
             <Routes>
-                {/* Route wrapper in care o sa avem layout-ul cu:
-                -> HeaderNavgiation
-                -> Titlu, etc */}
-                <Route path="/" element={<SurveyLayout/>}>
-                    
-                    {/* Fiecare pas din chestionar */}
-                    <Route index element={<SurveryVisitScope/>}></Route>
-                    <Route path="/ChooseUnity" element={<SurveyUnity/>}></Route>
-                    <Route path="/ChooseDate" element={<SurveyDate/>}></Route>
-                    <Route path="/UserData" element={<SurveyUser/>}></Route>
-
-                </Route>
-                <Route path="/ChooseMap" element={<SurveyBigMap/>}></Route>
+                {/* Fiecare pas din chestionar */}
+                <Route index element={<SurveryVisitScope/>}></Route>
+                <Route path="/ChooseUnity" element={<SurveyUnity/>}></Route>
+                <Route path="/ChooseDate" element={<SurveyDate/>}></Route>
+                <Route path="/UserData" element={<SurveyUser/>}></Route>
             </Routes>
         </BrowserRouter>
     )

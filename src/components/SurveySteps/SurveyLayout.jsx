@@ -1,126 +1,66 @@
-import "./SurveyLayout.scss";
+import './SurveyLayout.scss';
 
-import HeaderNavigation from "../UI/HeaderNavigation"
+import HeaderNavigation from '../UI/HeaderNavigation';
 
-import { useState, useEffect } from "react";
-import { Outlet, Link } from "react-router-dom";
+import { useEffect } from 'react';
+import { Link } from 'react-router-dom';
 
-function SurveryLayout(){
+const STEP_TITLES = [
+  'PAS 1 - Alege scopul vizitei',
+  'PAS 2 - Alege unitatea BCR',
+  'PAS 3 - Alege data pentru programare',
+  'PAS 4 - Introdu datele personale',
+];
 
-    // Array that contains each title => each step
-    const stepTitles = ["PAS 1 - Alege scopul vizitei", "PAS 2 - Alege unitatea BCR", "PAS 3 - Alege data pentru programare", "PAS 4 - Introdu datele personale"];
-    // Use state => updates the current step title
-    const [currentStepTitle, setCurrentStepTitle] = useState(localStorage.getItem('currentStepTitle'));
+function SurveryLayout({ children, currentPage }) {
+  //modifies survey navigation background
+  useEffect(() => {
+    handleStateCompletion(currentPage)
+  },[])
 
-    // Holds number of steps
-    const steps = stepTitles.length;
-    // Use state => updates current step progress
-    const [currentStepActive, setCurrentStepActive] = useState([true, false, false, false]);
+  function handleStateCompletion(pos) {
+    const root = document.documentElement;
 
-    // Keep state after refresh 
-    // => currentStepTitle
-    useEffect(()=>{
-        localStorage.setItem('currentStepTitle', currentStepTitle)
-    },[currentStepTitle]);
+    const completion = (pos * 100) / (STEP_TITLES.length - 1);
+    const incompletion = 100 - completion;
 
-    function hadndleCurrentStepActive(position){
-        // Two for iterations that generate an array:
-        // [true, true ... true[position], false[position + 1], false ... false false]
-        // in order to keep track of what the user needs to complete
-        let arrTrue = [], arrFalse = [];
-        for(let i = 0; i <= position; i++){
-            arrTrue.push(true);
-        }
-        for(let i = 0; i < steps - position; i++){
-            arrFalse.push(false);
-        }
-        const arr = arrTrue.concat(arrFalse);
-        
-        setCurrentStepActive(arr);
-    }
+    root?.style.setProperty('--navWidthComplete', completion + '%');
+    root?.style.setProperty('--navWidthIncomplete', incompletion + '%');
+  }
 
-    //modifies survey navigation background
-    function handleStateCompletion(pos){
-        const root = document.documentElement;
-        let completion, incompletion;
-        
-        if(pos === 0){
-            completion = 0;
-            incompletion = 0;
-        } else{
-            completion = (pos) * 100 / (steps - 1);
-            incompletion = 100 - completion;
-            console.log(completion, incompletion);
-        }
+  return (
+    <div className='body_wrapper'>
+      <HeaderNavigation />
 
-        root?.style.setProperty("--navWidthComplete", completion + "%");
-        root?.style.setProperty("--navWidthIncomplete", incompletion + "%");
-    }
+      <div className='page_wrapper'>
+        <h1>{STEP_TITLES[currentPage]}</h1>
 
-    function handleCeva(){
+        <div className='survey_navigation'>
+          {/* FIRST STEP */}
+          <div className={currentPage >= 0 ? 'survey_step survey_step__active' : 'survey_step'}>
+            <Link hidden={currentPage <= 0} to='/' onClick={() => handleStateCompletion(0)}/>
+          </div>
 
-    }
+          {/* SECOND STEP : CHOOSE BRANCH */}
+          <div className={currentPage >= 1 ? 'survey_step survey_step__active' : 'survey_step'}>
+            <Link hidden={currentPage <= 1} to='/ChooseUnity' onClick={() => handleStateCompletion(1)}/>
+          </div>
 
-    // Array which will hold the routes
-    // [0] => first step    : Choose visit reason
-    // [1] => second step   : Choose branch
-    // ... TO DO
-    // const routes = ["/", "ChooseUtility"];
+          {/* THIRD STEP: CHOOSE DATE */}
+          <div className={currentPage >= 2 ? 'survey_step survey_step__active' : 'survey_step'}>
+            <Link hidden={currentPage <= 2} to='/ChooseDate' onClick={() => handleStateCompletion(2)}/>
+          </div>
 
-    return (
-        <div className="body_wrapper">
-            <HeaderNavigation/>
-
-            <div className="page_wrapper">
-                <h1>{ currentStepTitle }</h1>
-
-                <div className="survey_navigation">
-
-                    {/* FIRST STEP */}
-                    <div className={ currentStepActive[0] ? "survey_step survey_step__active" : "survey_step" }>
-                        <Link to="/" 
-                            onClick={ () => {
-                                setCurrentStepTitle(stepTitles[0])
-                                hadndleCurrentStepActive(0);
-                                handleStateCompletion(0);
-                            }}>.</Link>
-                    </div>
-
-                    {/* SECOND STEP : CHOOSE BRANCH */}
-                    <div className={currentStepActive[1] ? "survey_step survey_step__active" : "survey_step" }>
-                        <Link to="/ChooseUnity"
-                            onClick={ () => {
-                                setCurrentStepTitle(stepTitles[1]);
-                                hadndleCurrentStepActive(1);
-                                handleStateCompletion(1);
-                            }}>.</Link>
-                    </div>
-
-                    {/* THIRD STEP: CHOOSE DATE */}
-                    <div className={ currentStepActive[2] ? "survey_step survey_step__active" : "survey_step" }>
-                        <Link to="/ChooseDate" 
-                            onClick={ () => {
-                                setCurrentStepTitle(stepTitles[2])
-                                hadndleCurrentStepActive(2);
-                                handleStateCompletion(2);
-                            }}>.</Link>
-                    </div>
-
-                    {/* FOURTH STEP: USER DATA */}
-                    <div className={ currentStepActive[3] ? "survey_step survey_step__active" : "survey_step" }>
-                        <Link to="/UserData" s
-                            onClick={ () => {
-                                setCurrentStepTitle(stepTitles[3])
-                                hadndleCurrentStepActive(3);
-                                handleStateCompletion(3);
-                            }}>.</Link>
-                    </div>
-                </div>
-
-                <Outlet/>
-            </div>
+          {/* FOURTH STEP: USER DATA */}
+          <div className={currentPage >= 3 ? 'survey_step survey_step__active' : 'survey_step'}>
+            <Link hidden={currentPage <= 3} to='/UserData' s onClick={() => handleStateCompletion(3)}/>
+          </div>
         </div>
-    )
+
+        {children}
+      </div>
+    </div>
+  );
 }
 
 export default SurveryLayout;
