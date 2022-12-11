@@ -50,7 +50,7 @@ function Location({branch}) {
             )
         else if (today < today_closing_datetime)
             return (
-                <div style={{ color: '#FFCC00' }}>Se inchide azi la {today_closing_datetime.toLocaleTimeString("en-US", {hour: "2-digit", minute: "2-digit"})}</div>
+                <div style={{ color: '#00AB56' }}>Se inchide azi la {today_closing_datetime.toLocaleTimeString("en-US", {hour: "2-digit", minute: "2-digit"})}</div>
             )
         else 
             return (
