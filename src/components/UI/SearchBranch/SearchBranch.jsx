@@ -1,7 +1,7 @@
 import "./SearchBranch.scss"
 function SearchBranch(props) {
     return (
-        <div className="container">
+        <div>
             <div className="nosubmit">
                 <input className="nosubmit" type="search" placeholder="Cauta unitate..."></input>
             </div>

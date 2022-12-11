@@ -2,19 +2,25 @@ import "./SurveyLayout.scss";
 
 import HeaderNavigation from "../UI/HeaderNavigation"
 
-import { useState } from "react";
+import { useState, useEffect } from "react";
 import { Outlet, Link } from "react-router-dom";
 
 function SurveryLayout(){
     // Array that contains each title => each step
     const stepTitles = ["PAS 1 - Alege scopul vizitei", "PAS 2 - Alege unitatea BCR", "PAS 3 - Alege data pentru programare", "PAS 4 - Introdu datele personale"];
     // Use state => updates the current step title
-    const [currentStepTitle, setCurrentStepTitle] = useState("PAS 1 - Alege scopul vizitei");
+    const [currentStepTitle, setCurrentStepTitle] = useState(localStorage.getItem('currentStepTitle'));
 
     // Holds number of steps
     const steps = stepTitles.length;
     // Use state => updates current step progress
     const [currentStepActive, setCurrentStepActive] = useState([true, false, false, false]);
+
+    // Keep state after refresh 
+    // => currentStepTitle
+    useEffect(()=>{
+        localStorage.setItem('currentStepTitle', currentStepTitle)
+    },[currentStepTitle]);
 
     function hadndleCurrentStepActive(position){
         // Two for iterations that generate an array:

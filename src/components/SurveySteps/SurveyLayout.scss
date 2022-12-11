@@ -20,6 +20,13 @@
     padding: 3rem;
 }
 
+// SPINNER WRAPPER
+.spinner-wrapper{
+    display: flex;
+    align-items: center;
+    justify-content: center;
+}
+
 // SURVEY WRAPPER FOR THE WHOLE SURVEY
 .survey_wrapper{
     background: $alb;
@@ -77,3 +84,20 @@
 
 .survey_step__active,
 .survey_step__done{ background-color: $albastru-deschis;}
+
+// Show more locations
+.btn-show-more__branches{
+    display: flex;
+    align-items: center;
+    justify-content: center;
+
+    background: $portocaliu;
+    color: $alb;
+
+    font-family: "400";
+    padding: 10px;
+    margin-top: 10px;   
+    border-radius: 10px;
+}
+
+.btn-show-more__branches:hover{ cursor: pointer; }
