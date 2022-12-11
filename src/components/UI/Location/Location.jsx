@@ -2,6 +2,7 @@ import { useEffect } from "react";
 import "./Location.scss"
 function Location({branch}) {
     if (!branch) return null;
+    
     const today = new Date()
 
     const getOpeningText = () => {
@@ -50,7 +51,7 @@ function Location({branch}) {
             <div className="mainBlock">
                 <div className="twoElementsInline">
                     <div className="child">
-                        <h2 className="name">{ branch.name }</h2>
+                        <h2 className="name">{ branch.title }</h2>
                     </div>
                     <div className="child">
                         <p className="distance">{ 100 }</p>

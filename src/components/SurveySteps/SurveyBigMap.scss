@@ -3,17 +3,28 @@
 
 .container__top-left{
     z-index: 2;
-    background: $albastru-deschis;
-    color: $alb;
+    background: $alb;
+    color: #484241;
 
     position: absolute;
-    top: 1vw;
-    left: 1vw;
+    top: 2vw;
+    left: 2vw;
 
     font-family: "600";
     text-decoration: none;
     border-radius: 10px;
-    padding: 15px;
+    padding: 10px;
+
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    box-shadow: rgba(0, 0, 0, 0.35) 0px 5px 15px;
+}
+
+.container__top-left img{
+    height: 12.5px;
+    width: 12.5px;
+    margin-right: 2.5px;
 }
 
 .container__bottom-left{
@@ -21,6 +32,7 @@
     width: 50vw;
     bottom: 1vw;
     left: 1vw;
+    box-shadow: rgba(0, 0, 0, 0.35) 0px 5px 15px;
 }
 
 @media screen and (max-width: 600px){

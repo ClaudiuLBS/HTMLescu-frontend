@@ -35,7 +35,7 @@ function SurveyDate(){
                 
                 <div className="survey_unity__scope">
                     <input type="text" placeholder="ceva..." value={selectedDate.toLocaleDateString()} onClick={() => { setOverlayState(!overlayState) }}/>
-                    <Button title="Continua"></Button>
+                    <Button href="/UserData" title="Continua"></Button>
                 </div>
 
                 {/* Trebuie adaugata clasa `error__message_visible` */}
