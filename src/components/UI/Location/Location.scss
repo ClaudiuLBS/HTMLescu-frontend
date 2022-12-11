@@ -69,6 +69,15 @@
   }
 }
 
+.mainBlock:hover{
+  border: 2px solid $albastru-deschis;
+  .btn-select{
+    background: $albastru-deschis;
+    color: $alb;
+  }
+  
+}
+
 .location-select__container{
   display: flex;
   align-items: center;

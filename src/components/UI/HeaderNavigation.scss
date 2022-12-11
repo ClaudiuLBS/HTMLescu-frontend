@@ -2,7 +2,7 @@
 @import "../../assets/fonts";
 
 .header_navigation{
-    background: $albastru-inchis;
+    background: var(--lightBg);
     color: $alb;
     display: flex;
     align-items: center;
