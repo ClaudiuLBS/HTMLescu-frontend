@@ -1,9 +1,9 @@
 import './Button.scss';
 
-function Button({ title }) {
+function Button({ title, href }) {
   return (
     <div>
-      <a href='/ChooseUnity'>
+      <a href={href}>
         <div className={'button'}>{title}</div>
       </a>
     </div>

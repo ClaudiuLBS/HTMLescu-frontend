@@ -22,3 +22,7 @@
     bottom: 1vw;
     left: 1vw;
 }
+
+@media screen and (max-width: 600px){
+    .container__bottom-left{ width: 80vw;}
+}

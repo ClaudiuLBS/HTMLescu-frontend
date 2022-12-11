@@ -13,10 +13,12 @@ function Location(props) {
                 </div>
                 <p className="addressAndServices">{ props.location }</p>
                 <p className="disponibility">{ props.disponibility }</p>
+
                 <div className="location-select__container">
                     <p className="addressAndServices">{ props.services }</p>
-                    <div className="btn-select">Selecteaza</div>
+                    <a href="/ChooseDate" className="btn-select">Selecteaza</a>
                 </div>
+            
             </div>
         </div>
     );

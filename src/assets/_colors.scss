@@ -6,3 +6,14 @@ $gri-deschis: #E4EAF0;
 $alb: #FFFFFF;
 $negru: #000000;
 $portocaliu: #ff7900;
+
+.error__message{
+    visibility: hidden;
+    font-family: "400";
+    font-size: 14px;
+    color: rgb(214, 40, 40);
+    margin-top: 5px;
+    margin-left: 5px;
+}
+
+.error__message_visible{ visibility: visible;}

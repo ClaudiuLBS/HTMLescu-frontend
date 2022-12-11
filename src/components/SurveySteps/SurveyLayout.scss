@@ -105,3 +105,12 @@
 
 .btn-show-more__branches:hover{ cursor: pointer; }
 
+@media screen and (max-width: 900px){
+    .page_wrapper,
+    .survey_wrapper{ padding: 1rem;}
+    
+    .survey_navigation,
+    .survey_navigation::after{ width: 75vw;}
+    .survey_wrapper{ width: 75vw; }
+}
+

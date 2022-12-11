@@ -8,6 +8,7 @@ import Buton from "../UI/Button/Button";
 import SurveryLayout from "./SurveyLayout";
 
 function SurveyVisitScope(){
+
     return(
         <SurveryLayout currentPage={0}>
             <div className="survey_wrapper">
@@ -15,8 +16,11 @@ function SurveyVisitScope(){
                 <MainDescription desc="Alege unul dintre subiectele de mai jos, pentru care programezi vizita in unitate."></MainDescription>
                 <div className="survey_unity__scope">
                     <DropDown></DropDown>
-                    <Buton href="awdaw" title="Continua"></Buton>
+                    <Buton href='/ChooseUnity' title="Continua"></Buton>
                 </div>
+
+                {/* Trebuie adaugata clasa `error__message_visible` */}
+                <span className="error__message">Acest camp este obligatoriu!</span>
             </div>
         </SurveryLayout>
     )

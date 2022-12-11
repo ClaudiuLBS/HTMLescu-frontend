@@ -53,7 +53,7 @@ function SurveryLayout({ children, currentPage }) {
 
           {/* FOURTH STEP: USER DATA */}
           <div className={currentPage >= 3 ? 'survey_step survey_step__active' : 'survey_step'}>
-            <Link hidden={currentPage <= 3} to='/UserData' s onClick={() => handleStateCompletion(3)}/>
+            <Link hidden={currentPage <= 3} to='/UserData' onClick={() => handleStateCompletion(3)}/>
           </div>
         </div>
 
