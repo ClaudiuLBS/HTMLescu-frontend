@@ -41,7 +41,18 @@ const ApiService = {
         .then((result) => resolve(result.data.availableTimeList))
         .catch((err) => reject(err));
     });
-  }
+  },
+  getCloseBranches(coords, radius = 30) {
+    // coords = (lat, long)
+    const [lat, long] = coords;
+    // Radius-ul asta ar trebui sa varieze in functe de zoom-ul hartii
+    return new Promise((resolve, reject) => {
+      axios
+        .get(`${config.apiUrl}/close-branches`, { params: { lat, long, radius } })
+        .then((result) => resolve(result.data.branches))
+        .catch((err) => reject(err));
+    });
+  },
 };
 
 export default ApiService;
