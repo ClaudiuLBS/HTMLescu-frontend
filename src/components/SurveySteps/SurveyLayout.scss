@@ -20,6 +20,13 @@
     padding: 3rem;
 }
 
+// SPINNER WRAPPER
+.spinner-wrapper{
+    display: flex;
+    align-items: center;
+    justify-content: center;
+}
+
 // SURVEY WRAPPER FOR THE WHOLE SURVEY
 .survey_wrapper{
     background: $alb;
