@@ -1,19 +1,25 @@
 import { useState } from 'react';
-import { useDispatch } from 'react-redux';
+import { useDispatch, useSelector } from 'react-redux';
 import { setAppointment } from '../../../redux/appointmentSlice';
+import ApiService from '../../../services/api.service';
 import Button from '../Button/Button';
 import './UserDateForm.scss';
 
 function UserDateForm() {
   const dispatch = useDispatch();
+  const appointment = useSelector((state) => state.appointment);
   const [nume, setNume] = useState('');
   const [prenume, setPrenume] = useState('');
   const [email, setEmail] = useState('');
 
   const onSubmitData = () => {
-    const name = nume + prenume;
+    const name = nume + ' ' + prenume;
     dispatch(setAppointment({ name, email }));
-
+    const { branch, datetime_start } = appointment;
+    console.log(name, email, datetime_start, branch)
+    ApiService.postAppointment(name, email, datetime_start, branch)
+      .then((res) => console.log(res))
+      .catch((err) => console.log(err));
   };
 
   return (
@@ -50,7 +56,7 @@ function UserDateForm() {
           <span className='error__message'>Acest camp este obligatoriu!</span>
         </div>
       </div>
-      <Button href={'/Final'} onClick={onSubmitData} title="Finalizeaza programarea"/>
+      <Button href={'/Final'} onClick={onSubmitData} title='Finalizeaza programarea' />
     </div>
   );
 }
