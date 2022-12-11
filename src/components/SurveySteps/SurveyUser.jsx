@@ -15,7 +15,6 @@ function SurveyUser(){
                 <MainTitle title="Introdu ceva"></MainTitle>
                 <MainDescription desc="Cauta unitatea BCR unde programezi vizita dupa adresa, oras/sector sau nume unitate."></MainDescription>
                 <UserDateForm></UserDateForm>
-                <Button title="Finalizeaza programarea"></Button>
             </div>
         </SurveryLayout>
     )
