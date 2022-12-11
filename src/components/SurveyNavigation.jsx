@@ -17,6 +17,7 @@ function SurveryNavigation(){
                 <Route path="/ChooseUnity" element={<SurveyUnity/>}></Route>
                 <Route path="/ChooseDate" element={<SurveyDate/>}></Route>
                 <Route path="/UserData" element={<SurveyUser/>}></Route>
+                <Route path="/ChooseMap" element={<SurveyBigMap/>}></Route>
             </Routes>
         </BrowserRouter>
     )

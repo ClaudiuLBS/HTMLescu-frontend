@@ -13,3 +13,23 @@
     }
 
 }
+
+@media screen and (max-width: 600px) {
+    .survey_unity__scope .container,
+    .button,
+    input{
+        margin-right: 0rem;
+        width: 100%;
+    }
+    .survey_unity__scope{
+        display: flex;
+        flex-direction: column;
+        height: auto;
+    }
+    .survey_unity__scope div, .button {
+        margin-right: 0rem;
+        margin-top: 10px;
+        width: 96%;
+    }
+
+}

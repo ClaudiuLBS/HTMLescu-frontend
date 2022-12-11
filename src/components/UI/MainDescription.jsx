@@ -1,7 +1,9 @@
 import "./MainDescription.scss"
 function MainDescription(props) {
     return (
-        <p>{ props.desc }</p>
+        <div className="Text-center">
+            <p>{ props.desc }</p>
+        </div>
     );
 }
 
