@@ -53,6 +53,14 @@ const ApiService = {
         .catch((err) => reject(err));
     });
   },
+  postAppointment(name, email, datetime_start, branch) {
+    return new Promise((resolve, reject) => {
+      axios
+      .post(`${config.apiUrl}/appointments/`, { name, email, datetime_start, branch })
+      .then((result) => resolve(result.data))
+      .catch((err) => reject(err));
+    })
+  }
 };
 
 export default ApiService;
