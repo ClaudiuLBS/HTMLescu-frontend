@@ -5,7 +5,7 @@ const initialState = {
   name: null,
   email: null,
   branch: null,
-  datetime_start: null
+  datetime_start: null,
 }
 
 export const appointmentSlice = createSlice({
@@ -22,10 +22,10 @@ export const appointmentSlice = createSlice({
         state.branch = action.payload.branch
       if (action.payload.datetime_start)
         state.datetime_start = action.payload.datetime_start
-    },
+    }
   },
 })
 
-export const { setAppointment } = appointmentSlice.actions
+export const { setAppointment, setSurveyStep } = appointmentSlice.actions;
 
-export default appointmentSlice.reducer
+export default appointmentSlice.reducer;

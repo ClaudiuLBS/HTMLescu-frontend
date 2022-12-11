@@ -70,3 +70,17 @@
     color: #00AB56;
   }
 }
+
+.location-select__container{
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+  
+  .btn-select{
+    color: $gri-inchis;
+    font-family: "600";
+    border: 2px solid $gri-inchis;
+    padding: 10px;
+    border-radius: 10px;
+  }
+}

@@ -87,7 +87,6 @@ function SurveyUnity() {
             </div>
 
             <ChooseFromMap></ChooseFromMap>
-            <SurveyMap/>
             <div>
                 {suggestedBranches.slice(0, numOfBranches).map(branch => (
                     <Location

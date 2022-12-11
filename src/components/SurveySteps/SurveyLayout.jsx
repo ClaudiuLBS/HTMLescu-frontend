@@ -6,6 +6,7 @@ import { useState, useEffect } from "react";
 import { Outlet, Link } from "react-router-dom";
 
 function SurveryLayout(){
+
     // Array that contains each title => each step
     const stepTitles = ["PAS 1 - Alege scopul vizitei", "PAS 2 - Alege unitatea BCR", "PAS 3 - Alege data pentru programare", "PAS 4 - Introdu datele personale"];
     // Use state => updates the current step title
@@ -56,7 +57,9 @@ function SurveryLayout(){
         root?.style.setProperty("--navWidthIncomplete", incompletion + "%");
     }
 
+    function handleCeva(){
 
+    }
 
     // Array which will hold the routes
     // [0] => first step    : Choose visit reason

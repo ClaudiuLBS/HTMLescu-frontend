@@ -6,6 +6,7 @@ import SurveryVisitScope from "./SurveySteps/SurveyVisitScope";
 import SurveyUnity from "./SurveySteps/SurveyUnity";
 import SurveyDate from "./SurveySteps/SurveyDate";
 import SurveyUser from "./SurveySteps/SurveyUser";
+import SurveyBigMap from "./SurveySteps/SurveyBigMap";
 
 function SurveryNavigation(){
     return(
@@ -21,7 +22,9 @@ function SurveryNavigation(){
                     <Route path="/ChooseUnity" element={<SurveyUnity/>}></Route>
                     <Route path="/ChooseDate" element={<SurveyDate/>}></Route>
                     <Route path="/UserData" element={<SurveyUser/>}></Route>
+
                 </Route>
+                <Route path="/ChooseMap" element={<SurveyBigMap/>}></Route>
             </Routes>
         </BrowserRouter>
     )
