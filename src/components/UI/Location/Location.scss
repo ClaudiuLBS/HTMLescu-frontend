@@ -19,7 +19,7 @@
     padding: 16px;
     background: $alb;
     border: 2px solid $gri-deschis;
-    border-radius: 8px
+    border-radius: 8px;
   }
   .twoElementsInline {
     white-space: nowrap;
@@ -62,9 +62,7 @@
     color: #5C7999;
   }
   .disponibility {
-    font-family: 'Inter';
-    font-style: normal;
-    font-weight: 400;
+    font-family: "400";
     font-size: 14px;
     line-height: 18px;
     color: #00AB56;
@@ -75,14 +73,21 @@
   display: flex;
   align-items: center;
   justify-content: space-between;
+  position: relative;
   
   .btn-select{
-    color: $gri-inchis;
+    position: absolute;
+    bottom: -18px;
+    right: -18px;
+    background: $gri-deschis;
+    color: $albastru-inchis;
     font-family: "600";
-    border: 2px solid $gri-inchis;
-    padding: 10px;
-    border-radius: 10px;
+    padding: 20px;
+    border-bottom-right-radius: 8px;
+    border-top-left-radius: 30px;
   }
+
+  .btn-select:hover{ cursor: pointer;}
 }
 
 @media screen and (max-width: 600px){

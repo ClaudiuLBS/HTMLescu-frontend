@@ -14,4 +14,10 @@ div {
   }
 
   .button:hover{ cursor: pointer;}
+  
+  .deactivate,
+  .button .deactivate:hover{
+    background: #686868;
+    cursor: initial;
+  }
 }

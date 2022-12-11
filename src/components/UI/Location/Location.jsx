@@ -51,11 +51,11 @@ function Location({branch}) {
             <div className="mainBlock">
                 <div className="twoElementsInline">
                     <div className="child">
-                        <h2 className="name">{ branch.title }</h2>
+                        <h2 className="name">{ branch.name }</h2>
                     </div>
-                    <div className="child">
+                    {/* <div className="child">
                         <p className="distance">{ 100 }</p>
-                    </div>
+                    </div> */}
                 </div>
                 <p className="addressAndServices">{ branch.street }</p>
                 <p className="disponibility">{ getOpeningText() }</p>
