@@ -22,7 +22,7 @@ const ApiService = {
     return new Promise((resolve, reject) => {
       axios
         .get(`${config.apiUrl}/location`)
-        .then((result) => resolve(result.data.city))
+        .then((result) => resolve(result.data))
         .catch((err) => reject(err));
     });
   },

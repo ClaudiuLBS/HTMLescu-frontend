@@ -1,3 +1,4 @@
+import { Link } from 'react-router-dom';
 import './Button.scss';
 
 function Button({ title, href, disabled=false, onClick }) {
@@ -11,9 +12,9 @@ function Button({ title, href, disabled=false, onClick }) {
 
   return (
     <div>
-      <a href={href}>
+      <Link to={href}>
         <div onClick={onClick} className={'button'}>{title}</div>
-      </a>
+      </Link>
     </div>
   );
 }

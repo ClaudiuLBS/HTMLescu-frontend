@@ -12,11 +12,15 @@ import "./SurveyDate.scss";
 
 import { useState } from "react";
 import SurveryLayout from "./SurveyLayout";
+import DateAndTime from "../UI/DateAndTime/DateAndTime";
 
 function SurveyDate(){
     const [selectedDate, setSelectedDate] = useState(new Date());
     const [overlayState, setOverlayState] = useState(false);
 
+    const minDate = new Date()
+    let maxDate = new Date()
+    maxDate.setDate(maxDate.getDate() + 13)
     return(
         <SurveryLayout currentPage={2}>
             <div className="survey_wrapper">
@@ -24,17 +28,21 @@ function SurveyDate(){
                     onClick={() => { setOverlayState(!overlayState) }}>
                 </div>
 
-                <Calendar className= { overlayState ? "my-calendar" : "my-calendar overlay__hidden"}
-                        onChange={setSelectedDate} 
-                        onClickDay={() => { setOverlayState(!overlayState) }}
-                        value={selectedDate}
-                        ></Calendar>
+                <Calendar 
+                    className= { overlayState ? "my-calendar" : "my-calendar overlay__hidden"}
+                    onChange={setSelectedDate} 
+                    onClickDay={() => { setOverlayState(!overlayState) }}
+                    value={selectedDate}
+                    minDate={minDate}
+                    maxDate={maxDate}
+                />
 
-                <MainTitle title="User date"></MainTitle>
-                <MainDescription desc="Cauta unitatea BCR unde programezi vizita dupa adresa, oras/sector sau nume unitate."></MainDescription>
+                <MainTitle title="User date" />
+                <MainDescription desc="Cauta unitatea BCR unde programezi vizita dupa adresa, oras/sector sau nume unitate." />
                 
                 <div className="survey_unity__scope">
                     <input type="text" placeholder="ceva..." value={selectedDate.toLocaleDateString()} onClick={() => { setOverlayState(!overlayState) }}/>
+                    <DateAndTime datetime={new Date(selectedDate)}/>
                     <Button href="/UserData" title="Continua"></Button>
                 </div>
 

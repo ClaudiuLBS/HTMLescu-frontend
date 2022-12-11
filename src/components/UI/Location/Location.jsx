@@ -1,6 +1,7 @@
 import { useEffect } from "react";
 import { useDispatch } from "react-redux";
-import { setAppointment } from "../../../redux/appointmentSlice";
+import { Link } from "react-router-dom";
+import { setAppointment, setBranch } from "../../../redux/appointmentSlice";
 import "./Location.scss"
 
 
@@ -12,7 +13,8 @@ function Location({branch}) {
 
     const selectBranch = () => {
         const branchId = branch.id
-        dispatch(setAppointment({branch: branchId}))
+        console.log(branchId)
+        dispatch(setBranch(branchId))
     }
 
     const getOpeningText = () => {
@@ -71,7 +73,7 @@ function Location({branch}) {
                 <p className="disponibility">{ getOpeningText() }</p>
                 <div className="location-select__container">
                     <p className="addressAndServices">{ 'ok' }</p>
-                    <a href="ChooseDate/"><div onClick={selectBranch} className="btn-select">Selecteaza</div></a>
+                    <Link to="/ChooseDate"><div onClick={selectBranch} className="btn-select">Selecteaza</div></Link>
                 </div>
             
             </div>

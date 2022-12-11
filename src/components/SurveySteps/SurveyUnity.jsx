@@ -23,7 +23,7 @@ function SurveyUnity() {
     const [suggestedBranches, setSuggestedBranches] = useState([]);
     const [numOfBranches, setNumOfBranches] = useState(2);
     const [userInput, setUserInput] = useState("0");
-
+    const [defaultValue, setDefaultValue] = useState('')
     // Use effect will get called when the page is being mounted
     useEffect(() => {
         ApiService.getAllBranches().then((res) => {
@@ -31,6 +31,10 @@ function SurveyUnity() {
             setSuggestedBranches(res);
             setbranchesAreLoading(true)
         });
+        ApiService.getUserLocation().then(res => {
+            setDefaultValue(res.city)
+            console.log(res.city)
+        })
     }, []);
 
     function handleNumOfBranches(){
@@ -62,7 +66,8 @@ function SurveyUnity() {
                             className="nosubmit" 
                             type="search" 
                             placeholder="Cauta unitate..."
-                            onChange={(e) => {setUserInput(e.target.value); filterBranches(); }}></input>
+                            onChange={(e) => {setUserInput(e.target.value); filterBranches(); }}
+                            value={defaultValue}/>
                     </div>
 
                     <div className="spinner-wrapper">
