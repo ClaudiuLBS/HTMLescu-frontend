@@ -10,6 +10,7 @@ import MainTitle from "../UI/MainTitle";
 import SearchBranch from "../UI/SearchBranch/SearchBranch"
 import ChooseFromMap from "../UI/ChooseFromMap/ChooseFromMap"
 import Location from "../UI/Location/Location"
+import SurveyMap from "./SurveyMap";
 
 function SurveyUnity(){
     const [branches, setBranches] = useState(null);
@@ -37,6 +38,7 @@ function SurveyUnity(){
             <MainDescription desc="Cauta unitatea BCR unde programezi vizita dupa adresa, oras/sector sau nume unitate."></MainDescription>
             <SearchBranch></SearchBranch>
             <ChooseFromMap></ChooseFromMap>
+            <SurveyMap/>
             <div>
                 {branches.slice(0, numOfBranches).map(branch => (
                     <Location
