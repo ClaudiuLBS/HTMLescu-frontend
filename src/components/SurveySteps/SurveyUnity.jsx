@@ -15,6 +15,7 @@ import SearchBranch from "../UI/SearchBranch/SearchBranch"
 import ChooseFromMap from "../UI/ChooseFromMap/ChooseFromMap"
 import Location from "../UI/Location/Location"
 import SurveyMap from "./SurveyMap";
+import SurveryLayout from "./SurveyLayout";
 
 function SurveyUnity() { 
     const [branches, setBranches] = useState(null);
@@ -51,6 +52,32 @@ function SurveyUnity() {
 
     if(branches == null)
         return (
+            <SurveryLayout currentPage={1}>
+                <div className="survey_wrapper">
+                    <MainTitle title="In ce locatie vrei sa ne vizitezi?"></MainTitle>
+                    <MainDescription desc="Cauta unitatea BCR unde programezi vizita dupa adresa, oras/sector sau nume unitate."></MainDescription>
+                    
+                    <div className="nosubmit">
+                        <input 
+                            className="nosubmit" 
+                            type="search" 
+                            placeholder="Cauta unitate..."
+                            onChange={(e) => {setUserInput(e.target.value); filterBranches(); }}></input>
+                    </div>
+
+                    <div className="spinner-wrapper">
+                        <InfinitySpin 
+                            width='200'
+                            color="#1A67D2"
+                        />
+                    </div>
+                    
+                </div>
+            </SurveryLayout>
+        );
+
+    return (
+        <SurveryLayout currentPage={1}>
             <div className="survey_wrapper">
                 <MainTitle title="In ce locatie vrei sa ne vizitezi?"></MainTitle>
                 <MainDescription desc="Cauta unitatea BCR unde programezi vizita dupa adresa, oras/sector sau nume unitate."></MainDescription>
@@ -60,50 +87,28 @@ function SurveyUnity() {
                         className="nosubmit" 
                         type="search" 
                         placeholder="Cauta unitate..."
-                        onChange={(e) => {setUserInput(e.target.value); filterBranches(); }}></input>
+                        onChange={(e) => {setUserInput(e.target.value); filterBranches(); setNumOfBranches(2); }}></input>
                 </div>
 
-                <div className="spinner-wrapper">
-                    <InfinitySpin 
-                        width='200'
-                        color="#1A67D2"
-                    />
-                </div>
-                
-            </div>
-        );
-
-    return (
-        <div className="survey_wrapper">
-            <MainTitle title="In ce locatie vrei sa ne vizitezi?"></MainTitle>
-            <MainDescription desc="Cauta unitatea BCR unde programezi vizita dupa adresa, oras/sector sau nume unitate."></MainDescription>
-            
-            <div className="nosubmit">
-                <input 
-                    className="nosubmit" 
-                    type="search" 
-                    placeholder="Cauta unitate..."
-                    onChange={(e) => {setUserInput(e.target.value); filterBranches(); setNumOfBranches(2); }}></input>
-            </div>
-
-            <ChooseFromMap></ChooseFromMap>
-            <SurveyMap/>
-            <div>
-                {suggestedBranches.slice(0, numOfBranches).map(branch => (
-                    <Location
+                <ChooseFromMap></ChooseFromMap>
+                <SurveyMap/>
+                <div>
+                    {suggestedBranches.slice(0, numOfBranches).map(branch => (
+                        <Location
                         title = {branch.name}
                         distance = "678"
                         location = {branch.street}
-                        disponibility = "Yees"
-                        services = "Yessir" 
-                    >
-                    </Location>
-                ))}
-                {
-                    numOfBranches + 5 < suggestedBranches.length ? <div className="btn-show-more__branches" onClick={() => setNumOfBranches(handleNumOfBranches())}>Afiseaza inca 5 locatii</div> : null
-                }
+                            disponibility = "Yees"
+                            services = "Yessir" 
+                            >
+                        </Location>
+                    ))}
+                    {
+                        numOfBranches + 5 < suggestedBranches.length ? <div className="btn-show-more__branches" onClick={() => setNumOfBranches(handleNumOfBranches())}>Afiseaza inca 5 locatii</div> : null
+                    }
+                </div>
             </div>
-        </div>
+        </SurveryLayout>
     );
 }
 

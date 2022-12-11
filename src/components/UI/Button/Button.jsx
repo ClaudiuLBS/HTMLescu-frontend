@@ -1,11 +1,13 @@
-import "./Button.scss";
+import './Button.scss';
 
-function Button(props) {
-    return (
-        <div>
-            <div className={"button"} >{ props.title }</div>
-        </div>
-    );
+function Button({ title }) {
+  return (
+    <div>
+      <a href='/ChooseUnity'>
+        <div className={'button'}>{title}</div>
+      </a>
+    </div>
+  );
 }
 
 export default Button;
