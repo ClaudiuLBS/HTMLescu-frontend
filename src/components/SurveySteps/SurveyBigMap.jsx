@@ -1,12 +1,14 @@
 import SurveyMap from "./SurveyMap";
 import "./SurveyBigMap.scss";
 import Location from "../UI/Location/Location";
+import Arrow from "../../assets/images/arrow.png";
 
 function SurveyBigMap(){
     return(
         <div>
             <a href="/ChooseUnity" className="container__top-left">
-                Inapoi la cautare
+                <img src={Arrow} alt="arrow" />
+                <div>Inapoi</div>
             </a>
             <SurveyMap></SurveyMap>    
             <div className="container__bottom-left">
