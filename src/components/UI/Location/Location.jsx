@@ -1,7 +1,7 @@
 import { useEffect } from "react";
 import { useDispatch } from "react-redux";
 import { Link } from "react-router-dom";
-import { setAppointment, setBranch } from "../../../redux/appointmentSlice";
+import { setAppointment } from "../../../redux/appointmentSlice";
 import "./Location.scss"
 
 
@@ -13,8 +13,7 @@ function Location({branch}) {
 
     const selectBranch = () => {
         const branchId = branch.id
-        console.log(branchId)
-        dispatch(setBranch(branchId))
+        dispatch(setAppointment({ branch: branchId }))
     }
 
     const getOpeningText = () => {
@@ -58,6 +57,22 @@ function Location({branch}) {
                 <div>Se deschide maine la {tomorrow_starting_datetime.toLocaleTimeString("en-US", {hour: "2-digit", minute: "2-digit"})}</div>
             )
     }
+
+    const branchFeature = () => {
+        const schedule = branch.appointment_schedule;
+        let features = ""
+        if(schedule.is_cashless){
+            features += "Cashless •";
+        }
+        if(schedule.is_sunday_open){
+            features += "Deschis duminica •";
+        }
+        if(schedule.is_weekend_open){
+            features += "Deschis in weeked •";
+        }
+        return features.slice(0, -1);
+    }
+
     return (
         <div className="location__container">
             <div className="mainBlock">
@@ -72,7 +87,7 @@ function Location({branch}) {
                 <p className="addressAndServices">{ branch.street }</p>
                 <p className="disponibility">{ getOpeningText() }</p>
                 <div className="location-select__container">
-                    <p className="addressAndServices">{ 'ok' }</p>
+                    <p className="addressAndServices">{ branchFeature() }</p>
                     <Link to="/ChooseDate"><div onClick={selectBranch} className="btn-select">Selecteaza</div></Link>
                 </div>
             

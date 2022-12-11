@@ -13,16 +13,23 @@
 }
 
 .survey-completion__message{
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    flex-direction: column;
+
     text-align: center;
     color: $alb;
     h1{
         font-family: "700";
         max-width: 30vw;
+        color: $alb;
     }
     
     p{
         font-family: "400";
         max-width: 30vw;
+        color: $alb;
     }
 }
 
@@ -33,4 +40,12 @@
     text-decoration: none;
     padding: 10px;
     border-radius: 10px;
+}
+
+@media screen and (max-width: 900px){
+    .survey-completion__message{
+        h1, p{
+            max-width: 60vw;
+        }
+    }
 }

@@ -26,12 +26,9 @@ export const appointmentSlice = createSlice({
       if (action.payload.operation)
         state.operation = action.payload.operation
     },
-    setBranch: (state, action) => {
-      state.branch = action.payload
-    }
   },
 })
 
-export const { setAppointment, setBranch } = appointmentSlice.actions;
+export const { setAppointment } = appointmentSlice.actions;
 
 export default appointmentSlice.reducer;

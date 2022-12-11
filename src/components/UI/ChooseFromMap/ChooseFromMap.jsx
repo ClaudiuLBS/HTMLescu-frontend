@@ -1,9 +1,10 @@
 import "./ChooseFromMap.scss";
 import { FaLocationArrow } from 'react-icons/fa'
+import { Link } from "react-router-dom";
 
 function ChooseFromMap(props) {
     return (
-        <a href="/ChooseMap">
+        <Link to="/ChooseMap">
             <div className="ccontainer">
                 <div className="ChooseBox">
                     <div className="ChooseParent">
@@ -16,7 +17,7 @@ function ChooseFromMap(props) {
                     </div>
                 </div>
             </div>
-        </a>
+        </Link>
     );
 }
 

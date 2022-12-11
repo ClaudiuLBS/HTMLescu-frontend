@@ -8,7 +8,7 @@ import VerificationIcon from "../../assets/images/verified-badge.png";
 function SurveyCompletion(props){
     return(
         <div className="survey-completion__wrapper">
-            <HeaderNavigation></HeaderNavigation>
+            <HeaderNavigation/>
             <div className="survey-completion__message">
                 <img src={VerificationIcon} alt="verification_icon" />
                 <h1>Vizita in uniunea BCR a fost programata cu succes!</h1>

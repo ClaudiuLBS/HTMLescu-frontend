@@ -37,11 +37,11 @@ function SurveyDate(){
                     maxDate={maxDate}
                 />
 
-                <MainTitle title="User date" />
-                <MainDescription desc="Cauta unitatea BCR unde programezi vizita dupa adresa, oras/sector sau nume unitate." />
+                <MainTitle title="In ce zi doresti sa ne vizitezi?" />
+                <MainDescription desc="Alege data si intervalul orar pentru vizita la BCR." />
                 
-                <div className="survey_unity__scope">
-                    <input type="text" placeholder="ceva..." value={selectedDate.toLocaleDateString()} onClick={() => { setOverlayState(!overlayState) }}/>
+                <div className="survey_date">
+                    <input type="text" value={selectedDate.toLocaleDateString()} onClick={() => { setOverlayState(!overlayState) }}/>
                     <DateAndTime datetime={new Date(selectedDate)}/>
                     <Button href="/UserData" title="Continua"></Button>
                 </div>
