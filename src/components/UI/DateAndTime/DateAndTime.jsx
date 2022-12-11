@@ -23,7 +23,7 @@ function DateAndTime({ datetime }) {
   if (!data) return null; //loading screen de fapt
   return (
     <div className={'containerDateAndTime'}>
-      <p className='miniTitle'>Alege ora</p>
+      <p className='miniTitle'>Alege ora:</p>
       <div className='DateAndTimeBox'>
         {data.map((item) => (
             <div onClick={() => dispatch(setAppointment({datetime_start: item.dateTimeStart}))} className='OraBox'>
