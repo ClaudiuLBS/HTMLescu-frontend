@@ -14,7 +14,7 @@ function SurveyCompletion(props){
                 <h1>Vizita in uniunea BCR a fost programata cu succes!</h1>
                 <p>Urmeaza sa primesti pe adresa de email toate informatiile despre programarea ta.</p>
             </div>
-            <a class="survey_back" href="https://www.bcr.ro/ro/persoane-fizice" target="_blank">Inapoi la bcr.ro</a>
+            <a className="survey_back" href="https://www.bcr.ro/ro/persoane-fizice" target="_blank">Inapoi la bcr.ro</a>
         </div>
     )
 }
