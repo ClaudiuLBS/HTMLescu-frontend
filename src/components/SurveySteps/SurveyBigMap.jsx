@@ -17,7 +17,7 @@ function SurveyBigMap() {
       <SurveyMap setBranch={(item) => setBranch(item)} />
       {!branch ? null : (
         <div className='container__bottom-left'>
-          <Location branch={branch} />
+          <Location branch={branch} fromMap={true}/>
         </div>
       )}
     </div>
