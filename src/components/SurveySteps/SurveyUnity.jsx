@@ -19,7 +19,7 @@ import SurveyMap from "./SurveyMap";
 function SurveyUnity() { 
     const [branches, setBranches] = useState(null);
     const [branchesAreLoading, setbranchesAreLoading ] = useState(false);
-    const [suggestedBranches, setSuggestedBranches] = useState(null);
+    const [suggestedBranches, setSuggestedBranches] = useState([]);
     const [numOfBranches, setNumOfBranches] = useState(2);
     const [userInput, setUserInput] = useState("0");
 
@@ -63,7 +63,7 @@ function SurveyUnity() {
                         onChange={(e) => {setUserInput(e.target.value); filterBranches(); }}></input>
                 </div>
 
-                <div class="spinner-wrapper">
+                <div className="spinner-wrapper">
                     <InfinitySpin 
                         width='200'
                         color="#1A67D2"
