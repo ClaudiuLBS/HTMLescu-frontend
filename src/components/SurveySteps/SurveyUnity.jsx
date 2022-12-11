@@ -75,9 +75,9 @@ function SurveyUnity() {
                     <MainTitle title="In ce locatie vrei sa ne vizitezi?"></MainTitle>
                     <MainDescription desc="Cauta unitatea BCR unde programezi vizita dupa adresa, oras/sector sau nume unitate."></MainDescription>
                     
-                    <div className="nosubmit">
+                    <div className="nosubmit nosubmit__search">
                         <input 
-                            className="nosubmit" 
+                            className="nosubmit nosubmit__search" 
                             type="search" 
                             placeholder="Cauta unitate..."
                             onChange={(e) => {setUserInput(e.target.value); filterBranches(); }}
@@ -104,7 +104,7 @@ function SurveyUnity() {
                 
                 <div className="nosubmit">
                     <input 
-                        className="nosubmit" 
+                        className="nosubmit nosubmit__search" 
                         type="search" 
                         placeholder="Cauta unitate..."
                         onChange={(e) => {setUserInput(e.target.value); filterBranches(); setNumOfBranches(2); }}></input>
