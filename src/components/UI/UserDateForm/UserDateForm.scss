@@ -44,3 +44,11 @@
 
 .formInputLabel:nth-child(1){ margin-right: 20px;}
 #lastFormInputLabel { margin-bottom: 20px;}
+
+@media screen and (max-width: 600px){
+  .formInputBlock{
+    flex-direction: column;
+  }
+  .formInputLabel:nth-child(1){ margin-right: 0px;}
+  .formInputLabel input{ max-width: 90%;}
+}

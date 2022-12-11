@@ -3,7 +3,6 @@
 
 input{
     border: none;
-    margin: 0;
     font-family: "600";
     border: 2px solid $gri-inchis;
     padding: 9px 4px 9px 40px;
@@ -86,4 +85,15 @@ input:focus {
     border-radius: 6px;
     font-weight: bold;
     color: white;
+}
+
+@media screen and (max-width: 600px){
+    .survey_unity__scope{
+        align-items: center;
+        justify-self: center;
+    }
+    .survey_unity__scope input{
+        max-width: 85%;
+        margin-right: 0;
+    }
 }

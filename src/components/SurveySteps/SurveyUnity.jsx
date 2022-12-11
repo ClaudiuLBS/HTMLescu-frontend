@@ -5,6 +5,9 @@ import {useState, useEffect} from "react";
 // Infinity spinner
 import { InfinitySpin } from 'react-loader-spinner';
 
+// Trie
+import Trie from '../Trie';
+
 import "./SurveyLayout.scss";
 import "../UI/SearchBranch/SearchBranch.scss";
 
@@ -18,12 +21,23 @@ import SurveyMap from "./SurveyMap";
 import SurveryLayout from "./SurveyLayout";
 
 function SurveyUnity() { 
+    // Trie data structure
+    let BranchTrie = new Trie(); 
+
     const [branches, setBranches] = useState(null);
     const [branchesAreLoading, setbranchesAreLoading ] = useState(false);
     const [suggestedBranches, setSuggestedBranches] = useState([]);
     const [numOfBranches, setNumOfBranches] = useState(2);
     const [userInput, setUserInput] = useState("0");
     const [defaultValue, setDefaultValue] = useState('')
+
+    // function BuildTrie(){
+    //     // For every branch, we will split it up and save it's word
+    //     for(let i = 0; i < branches.length; i++){
+
+    //     }
+    // }
+
     // Use effect will get called when the page is being mounted
     useEffect(() => {
         ApiService.getAllBranches().then((res) => {
@@ -50,7 +64,7 @@ function SurveyUnity() {
         )));
         console.log(userInput.toLowerCase());
     }
-
+    
     // Function to render the spinner
     // when the page is mounted
 
