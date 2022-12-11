@@ -1,0 +1,36 @@
+@import "../../assets/colors";
+@import "../../assets/fonts";
+
+.survey-completion__wrapper{
+    box-sizing: border-box;
+    background: $albastru-inchis;
+    height: 100vh;  
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    justify-content: space-between;
+    padding: 3rem;
+}
+
+.survey-completion__message{
+    text-align: center;
+    color: $alb;
+    h1{
+        font-family: "700";
+        max-width: 30vw;
+    }
+    
+    p{
+        font-family: "400";
+        max-width: 30vw;
+    }
+}
+
+.survey_back{
+    font-family: "400";
+    background: $gri-inchis;
+    color: $alb;
+    text-decoration: none;
+    padding: 10px;
+    border-radius: 10px;
+}
