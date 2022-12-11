@@ -26,7 +26,7 @@ function DateAndTime({ datetime }) {
       <p className='miniTitle'>Alege ora:</p>
       <div className='DateAndTimeBox'>
         {data.map((item) => (
-            <div onClick={() => dispatch(setAppointment({datetime_start: item.dateTimeStart}))} className='OraBox'>
+            <div onClick={() => dispatch(setAppointment({datetime_start: item.dateTimeStart}))} className={appointment.datetime_start == item.dateTimeStart ? 'OraBox selected' : 'OraBox'}>
               <p className='Ora'>
                 {new Date(item.dateTimeStart).toLocaleTimeString('en-US', { hour: '2-digit', minute: '2-digit' })} -{' '}
                 {new Date(item.dateTimeEnd).toLocaleTimeString('en-US', { hour: '2-digit', minute: '2-digit' })}

@@ -5,7 +5,7 @@ import ApiService from '../../../services/api.service';
 import Button from '../Button/Button';
 import './UserDateForm.scss';
 
-function UserDateForm() {
+function UserDateForm({navigate}) {
   const dispatch = useDispatch();
   const appointment = useSelector((state) => state.appointment);
   const [nume, setNume] = useState('');
@@ -13,12 +13,13 @@ function UserDateForm() {
   const [email, setEmail] = useState('');
 
   const onSubmitData = () => {
+    console.log(navigate)
     const name = nume + ' ' + prenume;
     dispatch(setAppointment({ name, email }));
     const { branch, datetime_start } = appointment;
     console.log(name, email, datetime_start, branch)
     ApiService.postAppointment(name, email, datetime_start, branch)
-      .then((res) => console.log(res))
+      .then((res) => navigate('/Final'))
       .catch((err) => console.log(err));
   };
 
@@ -56,7 +57,7 @@ function UserDateForm() {
           <span className='error__message'>Acest camp este obligatoriu!</span>
         </div>
       </div>
-      <Button href={'/Final'} onClick={onSubmitData} title='Finalizeaza programarea' />
+      <Button onClick={onSubmitData} title='Finalizeaza programarea' />
     </div>
   );
 }
