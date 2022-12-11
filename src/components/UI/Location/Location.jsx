@@ -66,6 +66,7 @@ function Location({branch}) {
                     <p className="addressAndServices">{ 'ok' }</p>
                     <div className="btn-select">Selecteaza</div>
                 </div>
+            
             </div>
         </div>
     );

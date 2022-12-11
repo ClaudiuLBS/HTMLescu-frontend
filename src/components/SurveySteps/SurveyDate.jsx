@@ -37,6 +37,9 @@ function SurveyDate(){
                     <input type="text" placeholder="ceva..." value={selectedDate.toLocaleDateString()} onClick={() => { setOverlayState(!overlayState) }}/>
                     <Button title="Continua"></Button>
                 </div>
+
+                {/* Trebuie adaugata clasa `error__message_visible` */}
+                <span className="error__message">Acest camp este obligatoriu!</span>
             </div>
         </SurveryLayout>
     )
