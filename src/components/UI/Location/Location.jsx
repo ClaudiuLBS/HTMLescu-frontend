@@ -46,15 +46,15 @@ function Location({branch}) {
 
         if (today < today_starting_datetime)
             return (
-                <div>Se deschide azi la {today_starting_datetime.toLocaleTimeString("en-US", {hour: "2-digit", minute: "2-digit"})}</div>
+                <div style={{ color: '#FFCC00' }}>Se deschide azi la {today_starting_datetime.toLocaleTimeString("en-US", {hour: "2-digit", minute: "2-digit"})}</div>
             )
         else if (today < today_closing_datetime)
             return (
-                <div>Se inchide azi la {today_closing_datetime.toLocaleTimeString("en-US", {hour: "2-digit", minute: "2-digit"})}</div>
+                <div style={{ color: '#FFCC00' }}>Se inchide azi la {today_closing_datetime.toLocaleTimeString("en-US", {hour: "2-digit", minute: "2-digit"})}</div>
             )
         else 
             return (
-                <div>Se deschide maine la {tomorrow_starting_datetime.toLocaleTimeString("en-US", {hour: "2-digit", minute: "2-digit"})}</div>
+                <div style={{ color: 'rgb(214, 40, 40)' }}>Se deschide maine la {tomorrow_starting_datetime.toLocaleTimeString("en-US", {hour: "2-digit", minute: "2-digit"})}</div>
             )
     }
 
