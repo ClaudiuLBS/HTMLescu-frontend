@@ -46,7 +46,7 @@ function Location({branch}) {
 
         if (today < today_starting_datetime)
             return (
-                <div style={{ color: '#FFCC00' }}>Se deschide azi la {today_starting_datetime.toLocaleTimeString("en-US", {hour: "2-digit", minute: "2-digit"})}</div>
+                <div style={{ color: '#fcba03' }}>Se deschide azi la {today_starting_datetime.toLocaleTimeString("en-US", {hour: "2-digit", minute: "2-digit"})}</div>
             )
         else if (today < today_closing_datetime)
             return (
